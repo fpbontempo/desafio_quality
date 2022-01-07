@@ -1,4 +1,4 @@
-package com.desafio.desafiotesting.resources.exceptions;
+package com.desafio.desafiotesting.resources.advice;
 
 import lombok.Getter;
 
@@ -11,8 +11,8 @@ public class ValidationError extends StandardError {
     @Getter
     private List<FieldMessage> errors = new ArrayList<>();
 
-    public ValidationError(Long timestamp, Integer status, String error, String path) {
-        super(timestamp, status, error, path);
+    public ValidationError(Long timestamp, Integer status, String error, String path, String message) {
+        super(timestamp, status, error, path, message);
     }
 
     public void addError(String fieldName, String message) {

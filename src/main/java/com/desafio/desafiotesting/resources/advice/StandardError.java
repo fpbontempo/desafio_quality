@@ -1,4 +1,4 @@
-package com.desafio.desafiotesting.resources.exceptions;
+package com.desafio.desafiotesting.resources.advice;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,5 +14,6 @@ public class StandardError implements Serializable {
     private Integer status;
     private String error;
     private String path;
+    private String message;
 }
 
